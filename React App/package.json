@@ -1,0 +1,29 @@
+{
+  "name": "react-app",
+  "version": "1.0.0",
+  "description": "Create a React project from scratch (without create-react-app)",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot --open",
+    "build": "webpack --config webpack.config.js --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Salman Ahmed",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "css-loader": "^3.4.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "style-loader": "^1.1.3"
+  }
+}
