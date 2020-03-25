@@ -5,16 +5,16 @@
 2. npm i express pg sequelize pg-hstore
 3. server.js
 ===============================================
-const http = require('http');
+```const http = require('http');
 const app = require('./app');
 
 let server = http.createServer(app);
 
-server.listen(8008, () => console.log('Connection is Ready at 8008'));
+server.listen(8008, () => console.log('Connection is Ready at 8008'));```
 ===============================================
 4. app.js
 ===============================================
-const express = require('express');
+```const express = require('express');
 const CRUD = require('./Controller/CRUD')
 const app = express();
 app.use(express.json());
@@ -22,11 +22,11 @@ app.use(express.json());
 
 app.use('/', CRUD);
 
-module.exports = app;
+module.exports = app;```
 ===============================================
 5. Database/database.js
 ===============================================
-const Sequelize = require('sequelize');
+```const Sequelize = require('sequelize');
 
 const db = new Sequelize('restaurant', 'postgres', 'postgres', {
   host: 'localhost',
@@ -38,11 +38,11 @@ db.authenticate()
     console.log('Database connected');
   })
 
-module.exports = db;
+module.exports = db;```
 ===============================================
 6. Model/Table.js
 ===============================================
-const db = require('../DataBase/database');
+```const db = require('../DataBase/database');
 const Sequelize = require('sequelize');
 
 const Table = db.define('dine_table', {
@@ -60,11 +60,11 @@ const Table = db.define('dine_table', {
 db.sync()
   .then((res) => console.log('Table DB has created', res))
 
-module.exports = Table;
+module.exports = Table;```
 ===============================================
 7. Controller/CRUD.js
 ===============================================
-const Table = require('..//Model/Table');
+```const Table = require('..//Model/Table');
 const express = require("express");
 const router = express.Router();
 
@@ -121,7 +121,7 @@ router.delete('/delete/:id', async (req, res) => {
   }
 })
 
-module.exports = router;
+module.exports = router;```
 ===============================================
 
 
