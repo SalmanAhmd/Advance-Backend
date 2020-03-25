@@ -1,17 +1,17 @@
-Create a React project from scratch (without create-react-app)
+# Create a React project from scratch (without create-react-app)
 
-Steps: 
-1. npm init
-2. npm i -D @babel/core @babel/preset-react @babel/preset-env
+### Steps: 
+1. ```npm init -y```
+2. ```npm i -D @babel/core @babel/preset-react @babel/preset-env```
 3. Create file .bablerc
-=============================================================
+```
 {
  "presets": ["@babel/preset-react", "@babel/preset-env"]
 }
-=============================================================
-4. npm i -D webpack webpack-cli babel-loader webpack-dev-server html-webpack-plugin
+```
+4. ```npm i -D webpack webpack-cli babel-loader webpack-dev-server html-webpack-plugin```
 5. Configure webpack: create file webpack.config.js
-=============================================================
+```
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
@@ -44,10 +44,9 @@ module.exports = {
         ]
     }
 }
-=============================================================
+```
 6. index.html in root folder
-=============================================================
-
+```
 <!doctype html>
 <html>
 <head>
@@ -59,20 +58,18 @@ module.exports = {
   <script src="/build/bundle.js"></script>
 </body>
 </html>
-
-=============================================================
-7. index.js in root folder (also install react npm pakages)
-=============================================================
+```
+7. index.js in root folder (also install react npm pakages```npm i react react-dom```)
+```
 import React from 'react'
 import ReactDOM from 'react-dom'
 
 import App from './src/App'
 
 ReactDOM.render(<App />, document.getElementById("root"))
-=============================================================
+```
 8. App.js in src folder
-import React from 'react';
-=============================================================
+```
 import React from 'react';
 
 const App = () => (
@@ -82,14 +79,13 @@ const App = () => (
 )
 
 export default App;
-=============================================================
-9. To import css 'import 'App.css';' (also install css npm pakages mentioned in webpack file)
+```
+9. To import css ```import 'App.css';``` (also install css npm pakages mentioned in webpack file)
 10. Edit 'scripts' in package.json
-=============================================================
+```
 "scripts": {
   "start": "webpack-dev-server --hot --open",
   "build": "webpack --config webpack.config.js --mode production",
 }
-=============================================================
-
-Refrence: https://medium.com/@tim.givois.mendez/create-a-react-project-from-scratch-without-create-react-app-f02fce4e05b
+```
+[](https://medium.com/@tim.givois.mendez/create-a-react-project-from-scratch-without-create-react-app-f02fce4e05b)
