@@ -125,7 +125,7 @@ module.exports = router;
 ```
 8. in pakage.json add this inside to scripts tag
 ```
-"start": "nodemon service.js",
+"start": "nodemon server.js",
 ```
 
 
