@@ -1,6 +1,6 @@
-#EsLint
+# EsLint
 
-###Steps:
+### Steps:
 1. ```npm init -y```
 2. ```npm i -D elsint```
 3. Install eslint extension in vscode
